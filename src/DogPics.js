@@ -13,7 +13,10 @@ function DogPics() {
         console.log("setState");
         setImages(data.message);
       });
-  });
+  }, []);
+  useEffect(() => {
+    document.title = text;
+  }, [text]);
 
   console.log("render");
 
